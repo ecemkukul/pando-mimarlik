@@ -1,0 +1,271 @@
+body {
+    font-family: 'Century Gothic', sans-serif !important;
+    height: 100vh;
+    cursor: none;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 10px solid #dcde60;
+    opacity: .5;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 3px solid rgb(50, 50, 50);
+    border-radius: 100%;
+    top: -10px;
+    left: -10px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(.3);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 2px solid rgb(50, 50, 50);
+    top: -50px;
+    left: -500px;
+}
+
+/* Navbar */
+
+
+.navbar-brand {
+    font-family: 'Century Gothic', sans-serif !important;
+    font-size: 26px !important;
+
+}
+
+.nav-item {
+    color: #020202 !important;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Century Gothic', sans-serif !important;
+}
+
+
+.dropdown-menu {
+
+    background-color: rgba(225, 242, 92, .8) !important;
+    opacity: 90%;
+
+}
+
+.color-base {
+
+    background-color: rgba(225, 242, 92, .9);
+}
+
+
+.dropdown-item:hover {
+    color: rgba(225, 242, 92, .8) !important;
+    background-color: rgba(50, 50, 50, .8) !important;
+
+}
+
+.dropdown-item2:hover {
+    color: rgba(225, 242, 92, .8) !important;
+
+}
+
+/* Dark Background */
+.dark-bg {
+    background-image: linear-gradient(rgba(150, 150, 150, .8), rgba(0, 0, 0, .9)), url('../home_img/03.png');
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+
+.dark-bg-about {
+    background-image: linear-gradient(rgba(150, 150, 150, .8), rgba(0, 0, 0, .9)), url('../about_img/db.png');
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+
+#hero .container {
+    height: 100vh;
+}
+
+#hero-2 .container {
+    height: 700px;
+}
+
+#hero-3 .container {
+    height: 25vh;
+}
+
+.display-1 {
+    font-family: 'Century Gothic', sans-serif !important;
+}
+
+#hero .button-color {
+    color: #E1F25C;
+    border-color: #E1F25C;
+}
+
+#hero .button-color:hover {
+    background-color: #E1F25C;
+    border-color: rgba(0, 0, 0, .9);
+    color: rgba(0, 0, 0, .9);
+}
+
+.link-logo-name {
+    white-space: nowrap !important;
+}
+
+.bg-text-op {
+    opacity: .5;
+}
+
+.blockquote-footer {
+    color: #ecebdf;
+     !important;
+}
+
+a {
+    color: unset;
+    font-family: unset;
+    text-decoration: unset;
+
+}
+
+a:hover {
+    color: rgba(225, 242, 92, .9);
+    font-family: unset;
+    text-decoration: none;
+    cursor: unset;
+}
+
+.dropdown-item:hover {
+    color: rgba(225, 242, 92, .8) !important;
+
+}
+
+.card-title {
+    font-family: 'Century Gothic', sans-serif !important;
+    font-size: 20px !important;
+}
+
+.card-text {
+    font-family: 'Century Gothic', sans-serif !important;
+    font-size: 12px !important;
+    font-style: oblique !important;
+}
+
+
+/* İletişim */
+
+
+#contact .container {
+    height: 12vh;
+    font-family: 'Century Gothic', sans-serif !important;
+    position: relative;
+    bottom: 0;
+    margin-bottom: 0;
+    top: 100%;
+}
+
+
+/* PORTFOLYO */
+
+section#portfolyo .latest-item img {
+
+    max-height: 100%;
+    max-width: 100%;
+    transition: filter .5s ease-in-out;
+    object-fit: cover;
+}
+
+section#portfolyo .latest-item {
+    position: relative;
+    max-height: 500px;
+    padding: 0;
+    overflow: hidden;
+}
+
+section#portfolyo .latest-item:hover .overlay {
+    opacity: 1 !important;
+    background: rgba(225, 242, 92, .8) !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section#portfolyo .latest-item:hover .overlay-text {
+    opacity: 1 !important;
+    transform: none;
+
+}
+
+section#portfolyo .latest-item .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background:  rgba(0, 0, 0, 1) !important;
+    opacity: .5;
+    color: rgba(0, 0, 0, 1);
+    transition: all .5s;
+}
+
+section#portfolyo .nav-link{
+    color: rgba(0, 0, 0, 1) !important;
+    font-style: normal !important;
+    position:relative;
+    font-style: italic;
+    font-size: 13px;
+    
+}
+
+section#portfolyo .nav-link:hover {
+    background-color: rgba(225, 242, 92, .8) !important;
+
+}
